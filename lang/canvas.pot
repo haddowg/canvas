@@ -1,6 +1,7 @@
 msgid ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+msgstr ""
 
 #: 404.php:4
 msgid "Sorry, but the page you were trying to view does not exist."
