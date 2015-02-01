@@ -185,28 +185,23 @@ msgid "Search"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "Roots Starter Theme"
+msgid "Canvas Starter Theme"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://roots.io/starter-theme/"
+msgid "http://githubcom/haddowg/canvas"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Roots is a WordPress starter theme based on HTML5 Boilerplate & Bootstrap. "
-"<a href=\"https://github.com/roots/roots/contributors\">Contribute on "
-"GitHub</a>"
+"Canvas is a WordPress starter theme based on HTML5 Boilerplate & Bootstrap. "
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Roots"
+msgid "Canvas"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://roots.io/"
+msgid "http://www.greghaddow.co.uk/"
 msgstr ""
 
-#. Template Name of the plugin/theme
-msgid "Custom Template"
-msgstr ""

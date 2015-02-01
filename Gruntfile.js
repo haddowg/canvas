@@ -47,7 +47,7 @@ module.exports = function(grunt) {
           // To enable, set sourceMap to true and update sourceMapRootpath based on your install
           sourceMap: true,
           sourceMapFilename: 'assets/css/main.css.map',
-          sourceMapRootpath: '/app/themes/roots/'
+          sourceMapRootpath: '/app/themes/canvas/'
         }
       },
       build: {
@@ -117,8 +117,8 @@ module.exports = function(grunt) {
           length: 32,
           manifest: 'assets/manifest.json',
           querystring: {
-            style: 'roots_css',
-            script: 'roots_js'
+            style: 'canvas_css',
+            script: 'canvas_js'
           }
         },
         files: {

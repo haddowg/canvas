@@ -1,7 +1,10 @@
+### 8.0.0: February 1st 2015
+* Forked from canvas/canvas
+
 ### 7.0.3: December 18th, 2014
 * Use `get_the_archive_title`
 * Remove `wp_title`, add title-tag theme support
-* Remove `Roots_Nav_Walker` as default for all menus
+* Remove `Canvas_Nav_Walker` as default for all menus
 * Update to Bootstrap 3.3.1
 * Add some base comment styling
 * Make search term `required` in search form
@@ -12,7 +15,7 @@
 * Move JavaScript to footer
 * Update hEntry schema to use `updated` instead of `published`
 * Move variables into `main.less`
-* Add `roots_body_class` function that checks for page slug in `body_class`
+* Add `canvas_body_class` function that checks for page slug in `body_class`
 * Move `wp_footer` from footer template into `base.php`
 
 ### 7.0.1: August 15th, 2014
@@ -27,16 +30,16 @@
 * Update to Bootstrap 3.2.0
 * Update to Modernizr 2.8.2
 * Update to jQuery 1.11.1
-* Move clean up, relative URLs, and nice search to [Soil](https://github.com/roots/soil)
+* Move clean up, relative URLs, and nice search to [Soil](https://github.com/canvas/soil)
 * Update LESS organization
-* Move [community translations](https://github.com/roots/roots-translations) to separate repository
+* Move [community translations](https://github.com/canvas/canvas-translations) to separate repository
 
 ### 6.5.2: February 4th, 2014
 * Update to Bootstrap 3.1.0
 * Move DOM routing into an anonymous function to support jQuery noConflict
 * Update to jQuery 1.11.0
 * Add notice to theme activation, tidy activation table markup
-* Remove changing media folder from theme activation (use [Bedrock](https://github.com/roots/bedrock) for clean URLs out of the box)
+* Remove changing media folder from theme activation (use [Bedrock](https://github.com/canvas/bedrock) for clean URLs out of the box)
 * Switch `div.main` to `main` element now that Modernizr uses the latest HTML5 Shiv
 * Update to Modernizr 2.7.0
 * Don't run JSHint on plugins (`assets/js/plugins/`)
@@ -46,12 +49,12 @@
 * Replace `grunt-recess` with `grunt-contrib-less`, add LESS source map support
 
 ### 6.5.1: November 5th, 2013
-* Move clean URLs to a [plugin](https://github.com/roots/roots-rewrites)
+* Move clean URLs to a [plugin](https://github.com/canvas/canvas-rewrites)
 * Update to Bootstrap 3.0.1
 
 ### 6.5.0: August 23rd, 2013
-* Reference new site, [http://roots.io/](http://roots.io/)
-* Remove bundled docs, reference [http://roots.io/docs/](http://roots.io/docs/)
+* Reference new site, [http://canvas.io/](http://canvas.io/)
+* Remove bundled docs, reference [http://canvas.io/docs/](http://canvas.io/docs/)
 * Use Bootstrap variables for media queries
 * Update to Bootstrap 3.0.0
 * Update to jQuery 1.10.2
@@ -70,7 +73,7 @@
 * Fix Theme Activation page issues
 * Fix issues with root relative URLs and rewrites on non-standard setups
 * Make sure rewrites are added to `.htaccess` immediately after activation
-* Move HTML5 Boilerplate's `.htaccess` to a [plugin](https://github.com/roots/wp-h5bp-htaccess)
+* Move HTML5 Boilerplate's `.htaccess` to a [plugin](https://github.com/canvas/wp-h5bp-htaccess)
 * Rename `page-custom.php` to `template-custom.php`
 * Don't warn about unwritable htaccess if that option is disabled
 * Add missing collapse class for top navbar
@@ -83,7 +86,7 @@
 * Fix missing closing div in comments
 * Fix for navbar dropdowns
 * Add option for using jQuery on Google CDN
-* Correct logic in `roots_enable_root_relative_urls`
+* Correct logic in `canvas_enable_root_relative_urls`
 * Add Greek translation, update Brazilian Portuguese translation
 * Update to Bootstrap 2.3.1
 * Simplify alerts
@@ -130,14 +133,14 @@
 * Update to Bootstrap 2.2.1
 * Update conditional feed method
 * Update to Bootstrap 2.2.0
-* Return instead of echo class names in `roots_main_class` and `roots_sidebar_class`
+* Return instead of echo class names in `canvas_main_class` and `canvas_sidebar_class`
 * Move nav customizations into `lib/nav.php`
 
 ### 6.1.0: October 2nd, 2012
-* Change roots_sidebar into a more explicit configuration array
+* Change canvas_sidebar into a more explicit configuration array
 * Re-organize configuration/setup files
 * Update to jQuery 1.8.2
-* Refactor/simplify Roots vCard Widget
+* Refactor/simplify Canvas vCard Widget
 * Move custom entry_meta code into template
 * Move Google Analytics code into footer template
 * Add CONTRIBUTING.md to assist with the new GitHub UI
@@ -162,7 +165,7 @@
 ### 5.2.0: August 18th, 2012
 * Update to jQuery 1.8.0 and Modernizr 2.6.1
 * Fix duplicate active class in `wp_nav_menu` items
-* Merge `Roots_Navbar_Nav_Walker` into `Roots_Nav_Walker`
+* Merge `Canvas_Navbar_Nav_Walker` into `Canvas_Nav_Walker`
 * Add and update code documentation
 * Use `wp_get_theme()` to get the theme name on activation
 * Use `<figure>` & `<figcaption>` for captions
@@ -193,7 +196,7 @@
 * Add a conditional feed link
 * Temporarily remove Gravity Forms customizations
 * Update to Bootstrap 2.0.2
-* Update `roots.pot` for translations
+* Update `canvas.pot` for translations
 * Add/update languages: Vietnamese, Swedish, Bulgarian, Turkish, Norwegian, Brazilian Portugese
 * Change widgets to use `<section>` instead of `<article>`
 * Add comment-reply.js
@@ -203,22 +206,22 @@
 ### 5.0.0: February 5th, 2012
 * Remove all frameworks except Bootstrap
 * Update to Bootstrap 2.0
-* Remove `roots-options.php` and replaced with a more simple `roots-config.php`
+* Remove `canvas-options.php` and replaced with a more simple `canvas-config.php`
 * Now using Bootstrap markup on forms, page titles, image galleries, alerts and errors, post and comment navigation
-* Remove Roots styles from `style.css` and introduced `app.css` for site-specific CSS
-* Remove almost all previous default Roots styling
+* Remove Canvas styles from `style.css` and introduced `app.css` for site-specific CSS
+* Remove almost all previous default Canvas styling
 * Latest updates from HTML5 Boilerplate
 
 ### 4.1.0: February 1st, 2012
 * Update translations
 * HTML5 Boilerplate updates
 * Fix for Server 500 errors
-* Add `roots-scripts.php`, now using `wp_enqueue_script`
-* Re-organize `roots-actions.php`
+* Add `canvas-scripts.php`, now using `wp_enqueue_script`
+* Re-organize `canvas-actions.php`
 * Allow `<script>` tags in TinyMCE
 * Add full width class and search form to 404 template
 * Remove Blueprint CSS specific markup
-* Use Roots Nav Walker as default
+* Use Canvas Nav Walker as default
 * Add author name and taxonomy name to archive template title
 * Add Full Width CSS class options
 
@@ -230,7 +233,7 @@
 * Update jQuery
 * Remove included jQuery plugins
 * Clean up whitespace, switched to two spaces for tabs
-* Clean up `body_class()` some more with `roots_body_class()`
+* Clean up `body_class()` some more with `canvas_body_class()`
 * Post meta information is now displayed using a function (similar to Twenty Eleven)
 * Bugfixes for 1140 options
 * Add first and last classes to widgets
@@ -269,7 +272,7 @@
 * Introduce cleaner way of including HTML5 Boilerplate's `.htaccess`
 * Add hooks &amp; actions
 * Rename `includes/` directory to `inc/`
-* Add a blank `inc/roots-custom.php` file
+* Add a blank `inc/canvas-custom.php` file
 
 ### 3.2.4: May 19th, 2011
 * Bugfixes
@@ -303,13 +306,13 @@
 * Allow the theme directory and name to be renamable
 
 ### 3.0.0: March 28th, 2011
-* Change name from BB to Roots and release to the public
+* Change name from BB to Canvas and release to the public
 * Update various areas to match the latest changes to HTML5 Boilerplate
 * Change the theme markup based on hCard/Readability Guidelines and work by Jonathan Neal
 * Create the navigation menus and automatically set their locations during theme activation
 * Set permalink structure to `/%year%/%postname%/`
 * Set uploads folder to `/assets/`
-* Rewrite static folders in `/wp-content/themes/roots/` (`css/`, `js/`, `img/`) to the root (`/css/`, `/js/`, `/img/`)
+* Rewrite static folders in `/wp-content/themes/canvas/` (`css/`, `js/`, `img/`) to the root (`/css/`, `/js/`, `/img/`)
 * Rewrite `/wp-content/plugins/` to `/plugins/`
 * Add more root relative URLs on WordPress functions
 * Search results (`/?s=query`) rewrite to `/search/query/`

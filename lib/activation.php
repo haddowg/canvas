@@ -7,29 +7,29 @@ if (is_admin() && isset($_GET['activated']) && 'themes.php' == $GLOBALS['pagenow
   exit;
 }
 
-function roots_theme_activation_options_init() {
+function canvas_theme_activation_options_init() {
   register_setting(
-    'roots_activation_options',
-    'roots_theme_activation_options'
+    'canvas_activation_options',
+    'canvas_theme_activation_options'
   );
 }
-add_action('admin_init', 'roots_theme_activation_options_init');
+add_action('admin_init', 'canvas_theme_activation_options_init');
 
-function roots_activation_options_page_capability() {
+function canvas_activation_options_page_capability() {
   return 'edit_theme_options';
 }
-add_filter('option_page_capability_roots_activation_options', 'roots_activation_options_page_capability');
+add_filter('option_page_capability_canvas_activation_options', 'canvas_activation_options_page_capability');
 
-function roots_theme_activation_options_add_page() {
-  $roots_activation_options = roots_get_theme_activation_options();
+function canvas_theme_activation_options_add_page() {
+  $canvas_activation_options = canvas_get_theme_activation_options();
 
-  if (!$roots_activation_options) {
+  if (!$canvas_activation_options) {
     add_theme_page(
-      __('Theme Activation', 'roots'),
-      __('Theme Activation', 'roots'),
+      __('Theme Activation', 'canvas'),
+      __('Theme Activation', 'canvas'),
       'edit_theme_options',
       'theme_activation_options',
-      'roots_theme_activation_options_render_page'
+      'canvas_theme_activation_options_render_page'
     );
   } else {
     if (is_admin() && isset($_GET['page']) && $_GET['page'] === 'theme_activation_options') {
@@ -39,68 +39,68 @@ function roots_theme_activation_options_add_page() {
     }
   }
 }
-add_action('admin_menu', 'roots_theme_activation_options_add_page', 50);
+add_action('admin_menu', 'canvas_theme_activation_options_add_page', 50);
 
-function roots_get_theme_activation_options() {
-  return get_option('roots_theme_activation_options');
+function canvas_get_theme_activation_options() {
+  return get_option('canvas_theme_activation_options');
 }
 
-function roots_theme_activation_options_render_page() { ?>
+function canvas_theme_activation_options_render_page() { ?>
   <div class="wrap">
-    <h2><?php printf(__('%s Theme Activation', 'roots'), wp_get_theme()); ?></h2>
+    <h2><?php printf(__('%s Theme Activation', 'canvas'), wp_get_theme()); ?></h2>
     <div class="update-nag">
-      <?php _e('These settings are optional and should usually be used only on a fresh installation', 'roots'); ?>
+      <?php _e('These settings are optional and should usually be used only on a fresh installation', 'canvas'); ?>
     </div>
     <?php settings_errors(); ?>
 
     <form method="post" action="options.php">
-      <?php settings_fields('roots_activation_options'); ?>
+      <?php settings_fields('canvas_activation_options'); ?>
       <table class="form-table">
-        <tr valign="top"><th scope="row"><?php _e('Create static front page?', 'roots'); ?></th>
+        <tr valign="top"><th scope="row"><?php _e('Create static front page?', 'canvas'); ?></th>
           <td>
             <fieldset>
-              <legend class="screen-reader-text"><span><?php _e('Create static front page?', 'roots'); ?></span></legend>
-              <select name="roots_theme_activation_options[create_front_page]" id="create_front_page">
-                <option selected="selected" value="true"><?php echo _e('Yes', 'roots'); ?></option>
-                <option value="false"><?php echo _e('No', 'roots'); ?></option>
+              <legend class="screen-reader-text"><span><?php _e('Create static front page?', 'canvas'); ?></span></legend>
+              <select name="canvas_theme_activation_options[create_front_page]" id="create_front_page">
+                <option selected="selected" value="true"><?php echo _e('Yes', 'canvas'); ?></option>
+                <option value="false"><?php echo _e('No', 'canvas'); ?></option>
               </select>
-              <p class="description"><?php printf(__('Create a page called Home and set it to be the static front page', 'roots')); ?></p>
+              <p class="description"><?php printf(__('Create a page called Home and set it to be the static front page', 'canvas')); ?></p>
             </fieldset>
           </td>
         </tr>
-        <tr valign="top"><th scope="row"><?php _e('Change permalink structure?', 'roots'); ?></th>
+        <tr valign="top"><th scope="row"><?php _e('Change permalink structure?', 'canvas'); ?></th>
           <td>
             <fieldset>
-              <legend class="screen-reader-text"><span><?php _e('Update permalink structure?', 'roots'); ?></span></legend>
-              <select name="roots_theme_activation_options[change_permalink_structure]" id="change_permalink_structure">
-                <option selected="selected" value="true"><?php echo _e('Yes', 'roots'); ?></option>
-                <option value="false"><?php echo _e('No', 'roots'); ?></option>
+              <legend class="screen-reader-text"><span><?php _e('Update permalink structure?', 'canvas'); ?></span></legend>
+              <select name="canvas_theme_activation_options[change_permalink_structure]" id="change_permalink_structure">
+                <option selected="selected" value="true"><?php echo _e('Yes', 'canvas'); ?></option>
+                <option value="false"><?php echo _e('No', 'canvas'); ?></option>
               </select>
-              <p class="description"><?php printf(__('Change permalink structure to /&#37;postname&#37;/', 'roots')); ?></p>
+              <p class="description"><?php printf(__('Change permalink structure to /&#37;postname&#37;/', 'canvas')); ?></p>
             </fieldset>
           </td>
         </tr>
-        <tr valign="top"><th scope="row"><?php _e('Create navigation menu?', 'roots'); ?></th>
+        <tr valign="top"><th scope="row"><?php _e('Create navigation menu?', 'canvas'); ?></th>
           <td>
             <fieldset>
-              <legend class="screen-reader-text"><span><?php _e('Create navigation menu?', 'roots'); ?></span></legend>
-              <select name="roots_theme_activation_options[create_navigation_menus]" id="create_navigation_menus">
-                <option selected="selected" value="true"><?php echo _e('Yes', 'roots'); ?></option>
-                <option value="false"><?php echo _e('No', 'roots'); ?></option>
+              <legend class="screen-reader-text"><span><?php _e('Create navigation menu?', 'canvas'); ?></span></legend>
+              <select name="canvas_theme_activation_options[create_navigation_menus]" id="create_navigation_menus">
+                <option selected="selected" value="true"><?php echo _e('Yes', 'canvas'); ?></option>
+                <option value="false"><?php echo _e('No', 'canvas'); ?></option>
               </select>
-              <p class="description"><?php printf(__('Create the Primary Navigation menu and set the location', 'roots')); ?></p>
+              <p class="description"><?php printf(__('Create the Primary Navigation menu and set the location', 'canvas')); ?></p>
             </fieldset>
           </td>
         </tr>
-        <tr valign="top"><th scope="row"><?php _e('Add pages to menu?', 'roots'); ?></th>
+        <tr valign="top"><th scope="row"><?php _e('Add pages to menu?', 'canvas'); ?></th>
           <td>
             <fieldset>
-              <legend class="screen-reader-text"><span><?php _e('Add pages to menu?', 'roots'); ?></span></legend>
-              <select name="roots_theme_activation_options[add_pages_to_primary_navigation]" id="add_pages_to_primary_navigation">
-                <option selected="selected" value="true"><?php echo _e('Yes', 'roots'); ?></option>
-                <option value="false"><?php echo _e('No', 'roots'); ?></option>
+              <legend class="screen-reader-text"><span><?php _e('Add pages to menu?', 'canvas'); ?></span></legend>
+              <select name="canvas_theme_activation_options[add_pages_to_primary_navigation]" id="add_pages_to_primary_navigation">
+                <option selected="selected" value="true"><?php echo _e('Yes', 'canvas'); ?></option>
+                <option value="false"><?php echo _e('No', 'canvas'); ?></option>
               </select>
-              <p class="description"><?php printf(__('Add all current published pages to the Primary Navigation', 'roots')); ?></p>
+              <p class="description"><?php printf(__('Add all current published pages to the Primary Navigation', 'canvas')); ?></p>
             </fieldset>
           </td>
         </tr>
@@ -111,8 +111,8 @@ function roots_theme_activation_options_render_page() { ?>
 
 <?php }
 
-function roots_theme_activation_action() {
-  if (!($roots_theme_activation_options = roots_get_theme_activation_options())) {
+function canvas_theme_activation_action() {
+  if (!($canvas_theme_activation_options = canvas_get_theme_activation_options())) {
     return;
   }
 
@@ -120,10 +120,10 @@ function roots_theme_activation_action() {
     return;
   }
 
-  if ($roots_theme_activation_options['create_front_page'] === 'true') {
-    $roots_theme_activation_options['create_front_page'] = false;
+  if ($canvas_theme_activation_options['create_front_page'] === 'true') {
+    $canvas_theme_activation_options['create_front_page'] = false;
 
-    $default_pages = array(__('Home', 'roots'));
+    $default_pages = array(__('Home', 'canvas'));
     $existing_pages = get_pages();
     $temp = array();
 
@@ -144,7 +144,7 @@ function roots_theme_activation_action() {
       wp_insert_post($add_default_pages);
     }
 
-    $home = get_page_by_title(__('Home', 'roots'));
+    $home = get_page_by_title(__('Home', 'canvas'));
     update_option('show_on_front', 'page');
     update_option('page_on_front', $home->ID);
 
@@ -155,8 +155,8 @@ function roots_theme_activation_action() {
     wp_update_post($home_menu_order);
   }
 
-  if ($roots_theme_activation_options['change_permalink_structure'] === 'true') {
-    $roots_theme_activation_options['change_permalink_structure'] = false;
+  if ($canvas_theme_activation_options['change_permalink_structure'] === 'true') {
+    $canvas_theme_activation_options['change_permalink_structure'] = false;
 
     if (get_option('permalink_structure') !== '/%postname%/') {
       global $wp_rewrite;
@@ -165,29 +165,29 @@ function roots_theme_activation_action() {
     }
   }
 
-  if ($roots_theme_activation_options['create_navigation_menus'] === 'true') {
-    $roots_theme_activation_options['create_navigation_menus'] = false;
+  if ($canvas_theme_activation_options['create_navigation_menus'] === 'true') {
+    $canvas_theme_activation_options['create_navigation_menus'] = false;
 
-    $roots_nav_theme_mod = false;
+    $canvas_nav_theme_mod = false;
 
-    $primary_nav = wp_get_nav_menu_object(__('Primary Navigation', 'roots'));
+    $primary_nav = wp_get_nav_menu_object(__('Primary Navigation', 'canvas'));
 
     if (!$primary_nav) {
-      $primary_nav_id = wp_create_nav_menu(__('Primary Navigation', 'roots'), array('slug' => 'primary_navigation'));
-      $roots_nav_theme_mod['primary_navigation'] = $primary_nav_id;
+      $primary_nav_id = wp_create_nav_menu(__('Primary Navigation', 'canvas'), array('slug' => 'primary_navigation'));
+      $canvas_nav_theme_mod['primary_navigation'] = $primary_nav_id;
     } else {
-      $roots_nav_theme_mod['primary_navigation'] = $primary_nav->term_id;
+      $canvas_nav_theme_mod['primary_navigation'] = $primary_nav->term_id;
     }
 
-    if ($roots_nav_theme_mod) {
-      set_theme_mod('nav_menu_locations', $roots_nav_theme_mod);
+    if ($canvas_nav_theme_mod) {
+      set_theme_mod('nav_menu_locations', $canvas_nav_theme_mod);
     }
   }
 
-  if ($roots_theme_activation_options['add_pages_to_primary_navigation'] === 'true') {
-    $roots_theme_activation_options['add_pages_to_primary_navigation'] = false;
+  if ($canvas_theme_activation_options['add_pages_to_primary_navigation'] === 'true') {
+    $canvas_theme_activation_options['add_pages_to_primary_navigation'] = false;
 
-    $primary_nav = wp_get_nav_menu_object(__('Primary Navigation', 'roots'));
+    $primary_nav = wp_get_nav_menu_object(__('Primary Navigation', 'canvas'));
     $primary_nav_term_id = (int) $primary_nav->term_id;
     $menu_items= wp_get_nav_menu_items($primary_nav_term_id);
 
@@ -205,11 +205,11 @@ function roots_theme_activation_action() {
     }
   }
 
-  update_option('roots_theme_activation_options', $roots_theme_activation_options);
+  update_option('canvas_theme_activation_options', $canvas_theme_activation_options);
 }
-add_action('admin_init','roots_theme_activation_action');
+add_action('admin_init','canvas_theme_activation_action');
 
-function roots_deactivation() {
-  delete_option('roots_theme_activation_options');
+function canvas_deactivation() {
+  delete_option('canvas_theme_activation_options');
 }
-add_action('switch_theme', 'roots_deactivation');
+add_action('switch_theme', 'canvas_deactivation');
