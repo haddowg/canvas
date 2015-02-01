@@ -1,0 +1,16 @@
+{
+    "name": "haddowg/canvas",
+    "description": "Canvas is a WordPress starter theme based on HTML5 Boilerplate & Bootstrap that will help you make better themes.",
+    "license": "GPL-3",
+    "authors": [
+        {
+            "name": "Greg Haddow",
+            "email": "greg@greghaddow.co.uk",
+            "homepage": "https://github.com/haddowg"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0"
+    }
+}
