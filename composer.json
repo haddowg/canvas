@@ -1,5 +1,6 @@
 {
     "name": "haddowg/canvas",
+    "type": "wordpress-theme",
     "description": "Canvas is a WordPress starter theme based on HTML5 Boilerplate & Bootstrap that will help you make better themes.",
     "license": "GPL-3",
     "authors": [
